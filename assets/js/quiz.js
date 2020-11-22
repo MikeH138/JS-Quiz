@@ -1,10 +1,14 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
+const questionCounterText = document.getElementById("questionCounter");
+const scoreText = document.getElementById("score");
+const timerText = document.getElementById("timer");
 
 var currentQuestion = {};
 var acceptingAnswers = false;
 var score = 0;
 var questionCounter = 0;
+var timer = 75;
 var availableQuestions = [];
 
 var questions = [
@@ -58,22 +62,24 @@ var questions = [
   },
 ];
 
-const correctAnswer = 10;
+const correctAnswer = 5;
 const maxQuestions = 6;
 
 function startGame() {
   questionCounter = 0;
   score = 0;
   availableQuestions = [...questions];
-  console.log(availableQuestions);
   getNewQuestion();
 };
 
 function getNewQuestion() {
   if(availableQuestions.length === 0 || questionCounter >= maxQuestions) {
+    localStorage.setItem("recentScore", score);
     return window.location.assign("/end.html");
   }
   questionCounter++;
+  questionCounterText.innerText = questionCounter + "/" + maxQuestions;
+
   var questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
@@ -84,7 +90,6 @@ function getNewQuestion() {
     });
 
     availableQuestions.splice(questionIndex, 1);
-
     acceptingAnswers = true;
 };
 
@@ -95,10 +100,30 @@ choices.forEach(choice => {
     acceptingAnswers = false;
     var selectedChoice = e.target;
     var selectedAnswer = selectedChoice.dataset["number"];
-    console.log(selectedAnswer);
-    getNewQuestion();
+
+    var answerStyle = 'incorrect';
+      if (selectedAnswer == currentQuestion.answer) {
+        answerStyle = 'correct';
+      }
+    
+      if(answerStyle === 'correct') {
+        incrementScore(correctAnswer);
+      }
+
+    selectedChoice.parentElement.classList.add(answerStyle);
+
+    setTimeout( () => {
+      selectedChoice.parentElement.classList.remove(answerStyle);
+      getNewQuestion();
+    }, 1000);
+
+    
   });
 });
 
+incrementScore = num => {
+  score += num;
+  scoreText.innerText = score;
+};
 
 startGame();

@@ -3,30 +3,53 @@
     margin-bottom: 0.5rem;
     width: 100%;
     font-size: 1.5rem;
-    border: 0.1rem solid #1877f2;
     background-color: white;
 }
 
 .choice-container:hover {
   cursor: pointer;
-  box-shadow: 0 0.4rem 1.4rem 0 rgba(24, 119, 242, 0.33);
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(118, 24, 242, 0.5);
   transform: translateY(-0.1rem);
   transition: transform 150ms;
 }
 
 .choice-letter {
-    padding: 1.25rem 2.1rem;
+    padding: 1.25rem 2rem;
     color: white;
-    background-color: #1877f2;
+    background-color: #4B0082;
+    border-right: .175rem solid white;
 }
 
 .choice-text {
     padding: 1.25rem;
-    color: black;
+    color: rgb(19, 19, 19);
     width: 100%;
+    border: .15rem solid rgb(19, 19, 19);
 }
 
 #question {
     text-align: center;
     justify-content: center;
+}
+
+.correct {
+  background-color: #4bdb6d;
+}
+
+.incorrect {
+  background-color: #df2739;
+}
+
+#hud {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.hud-main {
+  text-align: center;
 }
