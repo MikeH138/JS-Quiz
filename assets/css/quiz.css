@@ -1,0 +1,32 @@
+.choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.5rem;
+    border: 0.1rem solid #1877f2;
+    background-color: white;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(24, 119, 242, 0.33);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.choice-letter {
+    padding: 1.25rem 2.1rem;
+    color: white;
+    background-color: #1877f2;
+}
+
+.choice-text {
+    padding: 1.25rem;
+    color: black;
+    width: 100%;
+}
+
+#question {
+    text-align: center;
+    justify-content: center;
+}
