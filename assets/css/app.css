@@ -104,10 +104,6 @@ h3 {
   color: black;
 }
 
-.btn[disabled]:hover {
-  cursor: not-allowed;
-}
-
 a.btn:link {
   color: white;
 }
