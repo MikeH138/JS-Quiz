@@ -30,10 +30,10 @@ var questions = [
   }, 
   {
     question: "What is the correct syntax for referring to an external script file called 'app.js'?",
-    choice1: "<script file='app.js></script>",
-    choice2: "<script name='app.js></script>",
-    choice3: "<script href='app.js></script>",
-    choice4: "<script src='app.js></script>",
+    choice1: "<script file='app.js'></script>",
+    choice2: "<script name='app.js'></script>",
+    choice3: "<script href='app.js'></script>",
+    choice4: "<script src='app.js'></script>",
     answer: 4
   }, 
   {
