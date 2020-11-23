@@ -9,10 +9,6 @@ var maxHighScores = 10;
 
 finalScore.innerText = ("You scored " + recentScore + " out of 30 points!");
 
-username.addEventListener("keyup", () => {
-  saveScoreBtn.disabled = !username.value;
-});
-
 saveHighScore = e => {
   e.preventDefault();
 
