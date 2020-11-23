@@ -10,16 +10,16 @@
   <div class="container">
     <div id="end" class="flex-center flex-column">
       <h1 id="finalScore"></h1>
-      <form>
+      <form onsubmit="saveHighScore()">
         <input type="text" name="username" id="username" placeholder="username">
         <button 
           type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)">Save Your Score!
         </button>
       </form>
-      <a href="quiz.html" class="btn">Try Again</a>
-      <a href="index.html" class="btn">Home Page</a>
+      <a href="./quiz.html" class="btn">Try Again</a>
+      <a href="./index.html" class="btn">Home Page</a>
     </div>
   </div>
-  <script src="/assets/js/end.js"></script>
+  <script src="./assets/js/end.js"></script>
 </body>
 </html>
