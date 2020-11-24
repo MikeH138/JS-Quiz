@@ -24,7 +24,7 @@ When the user selects the correct answer, they will see their selection box turn
 
 As well, if the user selects the correct answer, the score will be dynamically updated by adding 5 points. 
 
-But, if the user selects an incorrect answer, their score will not change. However, their alloted time left to complete the quiz will be reduced by 10 seconds.
+But, if the user selects an incorrect answer, their score will not change. However, their allotted time left to complete the quiz will be reduced by 10 seconds.
 
 Once 60 seconds has elapsed, or the user answers all 6 questions, they are taken to the results page. Here they will see their score, and be given several options.
 
