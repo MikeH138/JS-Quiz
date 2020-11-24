@@ -40,7 +40,7 @@ Test your Javascript skills here:
 
 [Javascript Quiz](https://mikeh138.github.io/JS-Quiz/)
 
-![Screenshot of the Quiz in progress]()
+![Screenshot of the Quiz in progress](./assets/images/preview.JPG)
 
 ## Code of Conduct
 
