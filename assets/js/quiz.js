@@ -45,7 +45,7 @@ function quizTimer() {
 // Array of questions and answers used for the quiz, which are all individual objects within this array
 var questions = [
   {
-    question: "Who Invented Javascript?",
+    question: "Who invented Javascript?",
     choice1: "Elon Musk",
     choice2: "Bill Gates",
     choice3: "Brendan Eich",
