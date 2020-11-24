@@ -1,14 +1,15 @@
+// Variables for DOM manipulation
 var username = document.getElementById("username");
 var saveScoreBtn = document.getElementById("saveScoreBtn");
 var finalScore = document.getElementById("finalScore");
 var recentScore = localStorage.getItem("recentScore");
+var scoreText = document.getElementById("score");
 
 var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
-var maxHighScores = 10;
-
 finalScore.innerText = ("You scored " + recentScore + " out of 30 points!");
 
+// Function for saving a users highscore in localStorage
 saveHighScore = e => {
   e.preventDefault();
 

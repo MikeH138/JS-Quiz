@@ -141,3 +141,9 @@ input {
   margin-bottom: 3rem;
   text-align: center;
 }
+
+#timer {
+  font-size: 4.5rem;
+  color: #7011b4;
+  margin-bottom: 2rem;
+}

@@ -11,6 +11,7 @@
     <main>
       <div class="container">
         <div id="quiz" class="justify-center flex-column">
+          <!-- HUD for the quiz, showing the current question out of 6 that the user is on, how much time they have left, and their current score -->
           <div id="hud">
             <div id="hud-item">
               <p class="hud-prefix">
@@ -23,8 +24,8 @@
               <p class="hud-prefix">
                 Time:
               </p>
-              <h1 class="hud-main" id="timer">
-                60
+              <h1 class="hud-main">
+                <p id="timer">60</p>
               </h1>
             </div>
             <div id="hud-item">
@@ -36,6 +37,8 @@
               </h1>
             </div>
           </div>
+
+          <!-- Container for question and answers, this gets updated dynamically with javascript -->
           <h2 id="question">What is the answer to this question?</h2>
             <div class="choice-container">
               <p class="choice-letter">A</p>
